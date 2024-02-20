@@ -119,7 +119,9 @@ class SignUpViewController: BaseViewController {
         Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
             if let error = error {
                 print(error.localizedDescription)
+                print("failed")
             } else {
+                print("로그인 성공")
                 let login = LoginViewController.init()
                 login.hidesBottomBarWhenPushed = true
                 self.navigationController?.pushViewController(login, animated: true)

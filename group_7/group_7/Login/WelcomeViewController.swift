@@ -10,30 +10,7 @@ import UIKit
 class WelcomeViewController: UIViewController {
 
     private var titleLabel : UILabel!
-    
-    private lazy var topView : UIView = {
-        let backViwe = UIView.init(frame: CGRectMake(0,StatusBarHeight+wid(20),SCREEN_WIDTH,self.sliderImgView.y-(StatusBarHeight+wid(20))))
-        let lineView = UIView.init(frame: CGRectMake(0,0,SCREEN_WIDTH,1))
-        lineView.backgroundColor = RBG(60,72,96)
-        backViwe.addSubview(lineView)
-        let lineView1 = UIView.init(frame: CGRectMake(0,lineView.bottom+wid(28),SCREEN_WIDTH,1))
-        lineView1.backgroundColor = RBG(60,72,96)
-        backViwe.addSubview(lineView1)
-        self.titleLabel = creatLabel("",BoladFontSize(25),.black)
-        self.titleLabel.frame = CGRectMake(0,lineView1.bottom,SCREEN_WIDTH,backViwe.height-lineView1.bottom)
-        self.titleLabel.numberOfLines = 0
-        self.titleLabel.textAlignment = .center
-        self.titleLabel.adjustsFontSizeToFitWidth = true
-        self.titleLabel.baselineAdjustment = .alignBaselines
-        backViwe.addSubview(self.titleLabel)
-        self.view.addSubview(backViwe)
-        return backViwe
-    }()
-    private lazy var sliderImgView : WelcomeSliderImgView = {
-        let view = WelcomeSliderImgView.init(frame: CGRectMake(0,self.signBtn.y-(ISIphoneX ? wid(380) : wid(320)),SCREEN_WIDTH,(ISIphoneX ? wid(305) : wid(280))))
-        self.view.addSubview(view)
-        return view
-    }()
+  
     private lazy var signBtn : UIButton = {
         let btn = UIButton.init(frame: CGRectMake(wid(55),SCREEN_HEIGHT-wid(160),SCREEN_WIDTH-wid(55)*2,wid(45)))
         btn.layer.cornerRadius = btn.height/2.0
@@ -61,13 +38,59 @@ class WelcomeViewController: UIViewController {
     }()
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = .white
-        self.topView.alpha = 1
-        self.loginBtn.alpha = 1
-        self.sliderImgView.alpha = 1
-        self.sliderImgView.refreshData(["1","2","3"])
-        self.titleLabel.text = "“Welcome to Another Me”"
+//        self.view.backgroundColor = .white
+//        self.topView.alpha = 1
+//        self.loginBtn.alpha = 1
+//        self.sliderImgView.alpha = 1
+//        self.sliderImgView.refreshData(["1","2","3"])
+//        self.titleLabel.text = "Welcome to Another Me"
         // Do any additional setup after loading the view.
+        let backView = UIView(frame: CGRectMake(0,StatusBarHeight+wid(20),SCREEN_WIDTH,self.view.frame.height-(StatusBarHeight+wid(20))))
+        backView.backgroundColor = .yellow
+        self.view.addSubview(backView)
+        let imageView = UIImageView(frame: CGRect(x:0,y:100,width:backView.frame.width, height:backView.frame.height*0.3))
+        imageView.image = UIImage(named: "1")
+        imageView.contentMode = .scaleAspectFit
+        backView.addSubview(imageView)
+        
+        let mainTextLabel = UILabel(frame: CGRect(x:0,y:imageView.frame.maxY, width: backView.frame.width, height: 30))
+        mainTextLabel.text = "Welcome to"
+        mainTextLabel.textColor = .black
+        mainTextLabel.textAlignment = .center
+        mainTextLabel.font = UIFont.boldSystemFont(ofSize: 25)
+        mainTextLabel.numberOfLines = 0
+        backView.addSubview(mainTextLabel)
+        
+        let boldTextLabel = UILabel(frame: CGRect(x: 0, y: mainTextLabel.frame.maxY, width: backView.frame.width, height: 30))
+        boldTextLabel.text = "AnotherMe"
+        boldTextLabel.textColor = .black
+        boldTextLabel.textAlignment = .center
+        boldTextLabel.font = UIFont.boldSystemFont(ofSize: 25)
+        backView.addSubview(boldTextLabel)
+        
+        let normalTextLabel = UILabel(frame: CGRect(x: 0, y: boldTextLabel.frame.maxY, width: backView.frame.width, height: 30))
+        normalTextLabel.text = "\"A better version of oneself\""
+        normalTextLabel.textColor = .black
+        normalTextLabel.textAlignment = .center
+        normalTextLabel.font = UIFont.systemFont(ofSize: 25)
+        backView.addSubview(normalTextLabel)
+        
+        let button = UIButton(frame: CGRect(x: wid(25), y: normalTextLabel.frame.maxY + wid(12), width: SCREEN_WIDTH - wid(55), height: wid(45)))
+        button.layer.cornerRadius = button.frame.height / 2.0
+        button.layer.masksToBounds = true
+        button.backgroundColor = RBG(255, 255, 255)
+        button.setTitle("Let's Go!", for: .normal)
+        button.setTitleColor(.black, for: .normal)
+        button.titleLabel?.font = UIFont.systemFont(ofSize: 15)
+        button.addTarget(self, action: #selector(loginBtnAction), for: .touchUpInside)
+        backView.addSubview(button)
+        
+        let smallTextLabel = UILabel(frame: CGRect(x:wid(55), y:button.frame.maxY + wid(12), width:SCREEN_WIDTH-wid(55)*2, height: wid(20)))
+        smallTextLabel.text = "By continuing you accept our Privacy Policy, Term of Use, and Subscription Terms"
+        smallTextLabel.textColor = .black
+        smallTextLabel.textAlignment = .center
+        smallTextLabel.font = UIFont.systemFont(ofSize: 10)
+        backView.addSubview(smallTextLabel)
     }
 
     @objc func signBtnAction()

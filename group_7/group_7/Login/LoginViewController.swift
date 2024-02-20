@@ -49,7 +49,7 @@ class LoginViewController: BaseViewController {
        
         
         let googleIcon = UIImage(named: "googleLogo")
-        let scaledIcon = googleIcon?.scaleToSize(size: CGSize(width: 200, height: 40))
+        let scaledIcon = googleIcon?.scaleToSize(size: CGSize(width: 100, height: 40))
         googlesignin.setImage(scaledIcon, for: .normal)
         //googlesignin.tintColor = .clear
         //loginBtn.frame = CGRect(x: 20, y:200, width: 100, height: 40)
