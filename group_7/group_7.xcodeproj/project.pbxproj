@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8CC4EDED2B87FA9D00E1E860 /* NameQAViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC4EDEC2B87FA9D00E1E860 /* NameQAViewController.swift */; };
+		8CC4EDF12B88903100E1E860 /* AgeQAViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC4EDF02B88903100E1E860 /* AgeQAViewController.swift */; };
+		8CC4EDF32B8890C500E1E860 /* JobQAViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC4EDF22B8890C500E1E860 /* JobQAViewController.swift */; };
 		FB32F5A22B84E53400B32F1E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FB32F5A12B84E53400B32F1E /* GoogleService-Info.plist */; };
 		FB5994802B82499300D43DE6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB59947F2B82499300D43DE6 /* AppDelegate.swift */; };
 		FB5994842B82499300D43DE6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5994832B82499300D43DE6 /* ViewController.swift */; };
@@ -27,6 +30,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8CC4EDEC2B87FA9D00E1E860 /* NameQAViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameQAViewController.swift; sourceTree = "<group>"; };
+		8CC4EDF02B88903100E1E860 /* AgeQAViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgeQAViewController.swift; sourceTree = "<group>"; };
+		8CC4EDF22B8890C500E1E860 /* JobQAViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobQAViewController.swift; sourceTree = "<group>"; };
 		FB32F5A12B84E53400B32F1E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FB59947C2B82499300D43DE6 /* group_7.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = group_7.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB59947F2B82499300D43DE6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +65,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8CC4EDEB2B87FA7300E1E860 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				8CC4EDEC2B87FA9D00E1E860 /* NameQAViewController.swift */,
+				8CC4EDF02B88903100E1E860 /* AgeQAViewController.swift */,
+				8CC4EDF22B8890C500E1E860 /* JobQAViewController.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
 		FB5994732B82499300D43DE6 = {
 			isa = PBXGroup;
 			children = (
@@ -78,6 +94,7 @@
 		FB59947E2B82499300D43DE6 /* group_7 */ = {
 			isa = PBXGroup;
 			children = (
+				8CC4EDEB2B87FA7300E1E860 /* Profile */,
 				FB5994D02B824AB100D43DE6 /* Login */,
 				FB5994CF2B824AA100D43DE6 /* Base */,
 				FB59947F2B82499300D43DE6 /* AppDelegate.swift */,
@@ -197,9 +214,12 @@
 				FB5994D62B824B4400D43DE6 /* SignUpViewController.swift in Sources */,
 				FB5994842B82499300D43DE6 /* ViewController.swift in Sources */,
 				FB5D670E2B82634C009F65F7 /* SceneDelegate.swift in Sources */,
+				8CC4EDED2B87FA9D00E1E860 /* NameQAViewController.swift in Sources */,
+				8CC4EDF32B8890C500E1E860 /* JobQAViewController.swift in Sources */,
 				FB5994D22B824AC300D43DE6 /* BaseViewController.swift in Sources */,
 				FB5D670C2B825E2A009F65F7 /* WelcomeSliderImgView.swift in Sources */,
 				FB5994DA2B824C0900D43DE6 /* Tool.swift in Sources */,
+				8CC4EDF12B88903100E1E860 /* AgeQAViewController.swift in Sources */,
 				FB5994802B82499300D43DE6 /* AppDelegate.swift in Sources */,
 				FB5994D42B824B1500D43DE6 /* LoginViewController.swift in Sources */,
 				FB5994D82B824B6100D43DE6 /* WelcomeViewController.swift in Sources */,
