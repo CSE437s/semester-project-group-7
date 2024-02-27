@@ -12,17 +12,21 @@ import GoogleSignIn
 class LoginViewController: BaseViewController {
     let usernameTextField = UITextField()
     let passwordTextField = UITextField()
+    let signupBtn = UIButton(type: .system)
     let loginBtn = UIButton(type: .system)
-    let googlesignin = UIButton(type: .custom)
+    let orImage = UIImageView()
+    let googlesignin = UIImageView()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.white
-        creatHeaderStr(title: "Login", haveLfet: true, haveRight: false)
+        creatHeaderStr(title: "Hi! Let's connect first!", haveLfet: true, haveRight: false)
         
         usernameTextField.translatesAutoresizingMaskIntoConstraints = false
         passwordTextField.translatesAutoresizingMaskIntoConstraints = false
+        signupBtn.translatesAutoresizingMaskIntoConstraints = false
         loginBtn.translatesAutoresizingMaskIntoConstraints = false
+        orImage.translatesAutoresizingMaskIntoConstraints = false
         googlesignin.translatesAutoresizingMaskIntoConstraints = false
         
         //usernameTextField.frame = CGRect(x:20, y:100, width: 280, height: 40)
@@ -39,6 +43,12 @@ class LoginViewController: BaseViewController {
         passwordTextField.layer.borderColor = UIColor.orange.cgColor
         passwordTextField.layer.cornerRadius = 5.0
         
+        signupBtn.setTitle("SIGN UP", for: .normal)
+        signupBtn.addTarget(self, action: #selector(signupClicked), for: .touchUpInside)
+        signupBtn.layer.borderColor = UIColor.orange.cgColor
+        signupBtn.layer.borderWidth = 1.0
+        signupBtn.layer.cornerRadius = 5.0
+        
         loginBtn.setTitle("Login", for: .normal)
         //loginBtn.frame = CGRect(x: 20, y:200, width: 100, height: 40)
         loginBtn.addTarget(self, action: #selector(buttonClicked), for: .touchUpInside)
@@ -46,22 +56,19 @@ class LoginViewController: BaseViewController {
         loginBtn.layer.borderColor = UIColor.orange.cgColor
         loginBtn.layer.cornerRadius = 5.0
         
-       
+        orImage.isUserInteractionEnabled = true
+        googlesignin.isUserInteractionEnabled = true
         
-        let googleIcon = UIImage(named: "googleLogo")
-        let scaledIcon = googleIcon?.scaleToSize(size: CGSize(width: 100, height: 40))
-        googlesignin.setImage(scaledIcon, for: .normal)
-        //googlesignin.tintColor = .clear
-        //loginBtn.frame = CGRect(x: 20, y:200, width: 100, height: 40)
-        googlesignin.addTarget(self, action: #selector(google), for: .touchUpInside)
-        googlesignin.layer.borderWidth = 1.0
-        googlesignin.layer.borderColor = UIColor.orange.cgColor
-        googlesignin.layer.cornerRadius = 5.0
-        
+        orImage.image = UIImage(named: "or")
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(google))
+        googlesignin.addGestureRecognizer(tapGesture)
+        googlesignin.image = UIImage(named: "googleLogo")
         
         self.view.addSubview(usernameTextField)
         self.view.addSubview(passwordTextField)
+        self.view.addSubview(signupBtn)
         self.view.addSubview(loginBtn)
+        self.view.addSubview(orImage)
         self.view.addSubview(googlesignin)
         
         NSLayoutConstraint.activate([
@@ -75,18 +82,32 @@ class LoginViewController: BaseViewController {
             passwordTextField.widthAnchor.constraint(equalToConstant: 280),
             passwordTextField.heightAnchor.constraint(equalToConstant: 40),
             
+            signupBtn.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
+            signupBtn.topAnchor.constraint(equalTo: passwordTextField.bottomAnchor, constant: 20),
+            signupBtn.widthAnchor.constraint(equalToConstant: 280),
+            signupBtn.heightAnchor.constraint(equalToConstant: 40),
+            
             loginBtn.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
-            loginBtn.topAnchor.constraint(equalTo: passwordTextField.bottomAnchor, constant: 20),
+            loginBtn.topAnchor.constraint(equalTo: signupBtn.bottomAnchor, constant: 20),
             loginBtn.widthAnchor.constraint(equalToConstant: 280),
             loginBtn.heightAnchor.constraint(equalToConstant: 40),
             
+            orImage.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
+            orImage.topAnchor.constraint(equalTo: loginBtn.bottomAnchor, constant: 20),
+            orImage.widthAnchor.constraint(equalToConstant: 280),
+            orImage.heightAnchor.constraint(equalToConstant: 40),
+            
             googlesignin.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
-            googlesignin.topAnchor.constraint(equalTo: loginBtn.bottomAnchor, constant: 20),
-            googlesignin.widthAnchor.constraint(equalToConstant: 280),
+            googlesignin.topAnchor.constraint(equalTo: orImage.bottomAnchor, constant: 20),
+            googlesignin.widthAnchor.constraint(equalToConstant: 200),
             googlesignin.heightAnchor.constraint(equalToConstant: 40)
         ])
     }
 
+    @objc func signupClicked() {
+        let nameViewController = NameQAViewController()
+        self.navigationController?.pushViewController(nameViewController, animated: true)
+    }
     
     @objc func buttonClicked()
     {
@@ -128,7 +149,6 @@ class LoginViewController: BaseViewController {
             }
             
             guard let user = signInRes?.user else {return}
-            
             
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             if let tabBarController = storyboard.instantiateViewController(withIdentifier: "Tab") as? UITabBarController {

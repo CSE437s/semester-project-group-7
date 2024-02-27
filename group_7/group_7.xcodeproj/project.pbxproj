@@ -11,6 +11,7 @@
 		8CC4EDF12B88903100E1E860 /* AgeQAViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC4EDF02B88903100E1E860 /* AgeQAViewController.swift */; };
 		8CC4EDF32B8890C500E1E860 /* JobQAViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC4EDF22B8890C500E1E860 /* JobQAViewController.swift */; };
 		FB32F5A22B84E53400B32F1E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FB32F5A12B84E53400B32F1E /* GoogleService-Info.plist */; };
+		FB32F5A62B8E309100B32F1E /* AvatarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB32F5A52B8E309100B32F1E /* AvatarViewController.swift */; };
 		FB5994802B82499300D43DE6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB59947F2B82499300D43DE6 /* AppDelegate.swift */; };
 		FB5994842B82499300D43DE6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5994832B82499300D43DE6 /* ViewController.swift */; };
 		FB5994872B82499300D43DE6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB5994852B82499300D43DE6 /* Main.storyboard */; };
@@ -34,6 +35,7 @@
 		8CC4EDF02B88903100E1E860 /* AgeQAViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgeQAViewController.swift; sourceTree = "<group>"; };
 		8CC4EDF22B8890C500E1E860 /* JobQAViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobQAViewController.swift; sourceTree = "<group>"; };
 		FB32F5A12B84E53400B32F1E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		FB32F5A52B8E309100B32F1E /* AvatarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarViewController.swift; sourceTree = "<group>"; };
 		FB59947C2B82499300D43DE6 /* group_7.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = group_7.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB59947F2B82499300D43DE6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FB5994832B82499300D43DE6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -71,6 +73,7 @@
 				8CC4EDEC2B87FA9D00E1E860 /* NameQAViewController.swift */,
 				8CC4EDF02B88903100E1E860 /* AgeQAViewController.swift */,
 				8CC4EDF22B8890C500E1E860 /* JobQAViewController.swift */,
+				FB32F5A52B8E309100B32F1E /* AvatarViewController.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -219,6 +222,7 @@
 				FB5994D22B824AC300D43DE6 /* BaseViewController.swift in Sources */,
 				FB5D670C2B825E2A009F65F7 /* WelcomeSliderImgView.swift in Sources */,
 				FB5994DA2B824C0900D43DE6 /* Tool.swift in Sources */,
+				FB32F5A62B8E309100B32F1E /* AvatarViewController.swift in Sources */,
 				8CC4EDF12B88903100E1E860 /* AgeQAViewController.swift in Sources */,
 				FB5994802B82499300D43DE6 /* AppDelegate.swift in Sources */,
 				FB5994D42B824B1500D43DE6 /* LoginViewController.swift in Sources */,
