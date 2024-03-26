@@ -1,0 +1,156 @@
+{
+  "avatar": [
+    {
+      "name": "animal",
+      "list": [
+        "https://i.ibb.co/g4GdBWJ/cat.png",
+        "https://i.ibb.co/PWZVnw5/dog.png",
+        "https://i.ibb.co/QvdVmyL/elephant.png",
+        "https://i.ibb.co/HgStfw7/fox.png",
+        "https://i.ibb.co/RYMxX52/lion.png",
+        "https://i.ibb.co/YN3Bj77/monkey.png",
+        "https://i.ibb.co/mvsD93F/raccoon.png",
+        "https://i.ibb.co/0ykQxKf/red-panda.png",
+        "https://i.ibb.co/Ntg1VFs/tiger.png"
+      ]
+    },
+    {
+      "name": "fictional",
+      "list": [
+        "https://i.ibb.co/sKrwr76/batman.png",
+        "https://i.ibb.co/tQ0vLqt/deadpool.png",
+        "https://i.ibb.co/ZdqdH2z/hip-hop.png",
+        "https://i.ibb.co/WK83rG7/mummy.png",
+        "https://i.ibb.co/4VfL4yd/robot.png",
+        "https://i.ibb.co/RyQD91k/santa-claus.png",
+        "https://i.ibb.co/Zm31gXx/spiderman.png",
+        "https://i.ibb.co/JmpQrfB/superman.png",
+        "https://i.ibb.co/2jm9kNx/woman.png"
+      ]
+    },
+    {
+      "name": "food",
+      "list": [
+        "https://i.ibb.co/9npX4WV/chili-pepper.png",
+        "https://i.ibb.co/NNTdYZt/donut.png",
+        "https://i.ibb.co/9VBTQGm/fried-chicken.png",
+        "https://i.ibb.co/YBwN0Hj/fried-egg.png",
+        "https://i.ibb.co/PcmM2z8/hamburger.png",
+        "https://i.ibb.co/gSgbxpM/ice-cream.png",
+        "https://i.ibb.co/hX8RXLg/pizza.png",
+        "https://i.ibb.co/DVhs6Kn/sushi.png",
+        "https://i.ibb.co/4g4WJxL/taco.png"
+      ]
+    },
+    {
+      "name": "fruit",
+      "list": [
+        "https://i.ibb.co/XkTPrL7/apple.png",
+        "https://i.ibb.co/C5VBvJh/dragon-fruit.png",
+        "https://i.ibb.co/nnzFJY6/lemon.png",
+        "https://i.ibb.co/0YrMGKg/mango.png",
+        "https://i.ibb.co/WK591KD/orange.png",
+        "https://i.ibb.co/6Wd0T3L/pineapple.png",
+        "https://i.ibb.co/TRjcKhL/strawberry.png",
+        "https://i.ibb.co/PhfnGVL/tomato.png",
+        "https://i.ibb.co/VMYjNrn/watermelon.png"
+      ]
+    },
+    {
+      "name": "nature",
+      "list": [
+        "https://i.ibb.co/rvgg8bj/sun.png",
+        "https://i.ibb.co/mhBVDX2/cactus.png",
+        "https://i.ibb.co/0hKLzyc/christmas-tree.png",
+        "https://i.ibb.co/Kb2B26p/coral-reef.png",
+        "https://i.ibb.co/1qTKpjY/iceberg.png",
+        "https://i.ibb.co/brf0VDf/mountain.png",
+        "https://i.ibb.co/4NFV153/shell.png",
+        "https://i.ibb.co/GQ2NTxq/snowman.png",
+        "https://i.ibb.co/6ZDHcWJ/spring.png"
+      ]
+    },
+    {
+      "name": "professional",
+      "list": [
+        "https://i.ibb.co/B3RyxmP/academic.png",
+        "https://i.ibb.co/JpH2LLm/astronaut.png",
+        "https://i.ibb.co/3C9C1Kw/businessman.png",
+        "https://i.ibb.co/YBmHJJj/chef.png",
+        "https://i.ibb.co/9tX9F1p/doctor.png",
+        "https://i.ibb.co/cFF3v99/priest.png",
+        "https://i.ibb.co/jVt5T2x/soldier.png",
+        "https://i.ibb.co/Vm2wBQs/swat.png",
+        "https://i.ibb.co/LNVLdS6/writer.png"
+      ]
+    }
+  ],
+  "emoji": {
+    "list": [
+      {
+        "name": "happy",
+        "url": "https://i.ibb.co/XL7YZNg/happy.png"
+      },
+      {
+        "name": "laughing",
+        "url": "https://i.ibb.co/Y0P0shK/laughing.png"
+      },
+      {
+        "name": "bad",
+        "url": "https://i.ibb.co/Ky8QnHf/bad.png"
+      },
+      {
+        "name": "angry",
+        "url": "https://i.ibb.co/LNpRgJ8/angry.png"
+      },
+      {
+        "name": "dead",
+        "url": "https://i.ibb.co/ZMwjJ2z/dead.png"
+      },
+      {
+        "name": "crying",
+        "url": "https://i.ibb.co/x87HbTV/crying.png"
+      },
+      {
+        "name": "greed",
+        "url": "https://i.ibb.co/mFY9m1S/greed.png"
+      },
+      {
+        "name": "hypnotized",
+        "url": "https://i.ibb.co/VCpq0kY/hypnotized.png"
+      },
+      {
+        "name": "in-love",
+        "url": "https://i.ibb.co/Y2xHqLv/in-love.png"
+      },
+      {
+        "name": "pressure",
+        "url": "https://i.ibb.co/PwJTt0d/pressure.png"
+      },
+      {
+        "name": "sick",
+        "url": "https://i.ibb.co/k1Rdpk6/sick.png"
+      },
+      {
+        "name": "sleeping",
+        "url": "https://i.ibb.co/QfgCDVn/sleeping.png"
+      },
+      {
+        "name": "surprised",
+        "url": "https://i.ibb.co/3ktwXvS/surprised.png"
+      },
+      {
+        "name": "suspicious",
+        "url": "https://i.ibb.co/QN2yXFM/suspicious.png"
+      },
+      {
+        "name": "tired",
+        "url": "https://i.ibb.co/VCRC2K2/tired.png"
+      },
+      {
+        "name": "ugly",
+        "url": "https://i.ibb.co/CK85sdq/ugly.png"
+      }
+    ]
+  }
+}
