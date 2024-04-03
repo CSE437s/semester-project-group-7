@@ -19,6 +19,15 @@
 		4F97ED902BA9F000008B3712 /* CommentQAViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F97ED8F2BA9F000008B3712 /* CommentQAViewController.swift */; };
 		4F97ED922BA9F5FF008B3712 /* EndingPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F97ED912BA9F5FF008B3712 /* EndingPageViewController.swift */; };
 		4F97ED942BA9F65A008B3712 /* WellDonePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F97ED932BA9F65A008B3712 /* WellDonePageViewController.swift */; };
+		4F9D2E1C2BB3A3CA00B8AA6D /* CheckBoxListViewII.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F9D2E1B2BB3A3CA00B8AA6D /* CheckBoxListViewII.swift */; };
+		4FB1B6582BBC5D37003C5372 /* Birdsong.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4FB1B6502BBC5D37003C5372 /* Birdsong.mp3 */; };
+		4FB1B6592BBC5D37003C5372 /* Thunder.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4FB1B6512BBC5D37003C5372 /* Thunder.mp3 */; };
+		4FB1B65A2BBC5D37003C5372 /* Wind.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4FB1B6522BBC5D37003C5372 /* Wind.mp3 */; };
+		4FB1B65B2BBC5D37003C5372 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FB1B6532BBC5D37003C5372 /* HomeViewController.swift */; };
+		4FB1B65C2BBC5D37003C5372 /* UserProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FB1B6542BBC5D37003C5372 /* UserProfileController.swift */; };
+		4FB1B65D2BBC5D37003C5372 /* Ocean wave.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4FB1B6552BBC5D37003C5372 /* Ocean wave.mp3 */; };
+		4FB1B65E2BBC5D37003C5372 /* Rain.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4FB1B6562BBC5D37003C5372 /* Rain.mp3 */; };
+		4FB1B65F2BBC5D37003C5372 /* AudioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FB1B6572BBC5D37003C5372 /* AudioViewController.swift */; };
 		8C2D26052BAC0678003DD5F2 /* SpeziHealthKit in Frameworks */ = {isa = PBXBuildFile; productRef = 8C2D26042BAC0678003DD5F2 /* SpeziHealthKit */; };
 		8C2D26082BAC0963003DD5F2 /* SpeziOnboarding in Frameworks */ = {isa = PBXBuildFile; productRef = 8C2D26072BAC0963003DD5F2 /* SpeziOnboarding */; };
 		8CC4EDED2B87FA9D00E1E860 /* NameQAViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC4EDEC2B87FA9D00E1E860 /* NameQAViewController.swift */; };
@@ -59,6 +68,15 @@
 		4F97ED8F2BA9F000008B3712 /* CommentQAViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentQAViewController.swift; sourceTree = "<group>"; };
 		4F97ED912BA9F5FF008B3712 /* EndingPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndingPageViewController.swift; sourceTree = "<group>"; };
 		4F97ED932BA9F65A008B3712 /* WellDonePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WellDonePageViewController.swift; sourceTree = "<group>"; };
+		4F9D2E1B2BB3A3CA00B8AA6D /* CheckBoxListViewII.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckBoxListViewII.swift; sourceTree = "<group>"; };
+		4FB1B6502BBC5D37003C5372 /* Birdsong.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Birdsong.mp3; sourceTree = "<group>"; };
+		4FB1B6512BBC5D37003C5372 /* Thunder.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Thunder.mp3; sourceTree = "<group>"; };
+		4FB1B6522BBC5D37003C5372 /* Wind.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Wind.mp3; sourceTree = "<group>"; };
+		4FB1B6532BBC5D37003C5372 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		4FB1B6542BBC5D37003C5372 /* UserProfileController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfileController.swift; sourceTree = "<group>"; };
+		4FB1B6552BBC5D37003C5372 /* Ocean wave.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Ocean wave.mp3"; sourceTree = "<group>"; };
+		4FB1B6562BBC5D37003C5372 /* Rain.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Rain.mp3; sourceTree = "<group>"; };
+		4FB1B6572BBC5D37003C5372 /* AudioViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioViewController.swift; sourceTree = "<group>"; };
 		8CC4EDEC2B87FA9D00E1E860 /* NameQAViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameQAViewController.swift; sourceTree = "<group>"; };
 		8CC4EDF02B88903100E1E860 /* AgeQAViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgeQAViewController.swift; sourceTree = "<group>"; };
 		8CC4EDF22B8890C500E1E860 /* JobQAViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobQAViewController.swift; sourceTree = "<group>"; };
@@ -109,6 +127,14 @@
 		4F411D942BB26A5300183ABA /* Homepage */ = {
 			isa = PBXGroup;
 			children = (
+				4FB1B6532BBC5D37003C5372 /* HomeViewController.swift */,
+				4FB1B6572BBC5D37003C5372 /* AudioViewController.swift */,
+				4FB1B6502BBC5D37003C5372 /* Birdsong.mp3 */,
+				4FB1B6552BBC5D37003C5372 /* Ocean wave.mp3 */,
+				4FB1B6562BBC5D37003C5372 /* Rain.mp3 */,
+				4FB1B6512BBC5D37003C5372 /* Thunder.mp3 */,
+				4FB1B6522BBC5D37003C5372 /* Wind.mp3 */,
+				4FB1B6542BBC5D37003C5372 /* UserProfileController.swift */,
 				FB32F5A72BAA913D00B32F1E /* Health.swift */,
 				FB32F5B12BAB2E8C00B32F1E /* UserProfileController.swift */,
 				4F411D922BB2699000183ABA /* Tool.swift */,
@@ -129,6 +155,7 @@
 				40E4E53D2B90BEDB00DD24E3 /* CheckboxListView.swift */,
 				4F49FB632BA95F09009A620E /* YesNoQAViewController.swift */,
 				4F49FB652BA96583009A620E /* FrequencyQAViewController.swift */,
+				4F9D2E1B2BB3A3CA00B8AA6D /* CheckBoxListViewII.swift */,
 				4F97ED892BA9EAD1008B3712 /* ThemesQAViewController.swift */,
 				4F97ED8D2BA9EF1D008B3712 /* TimeQAViewController.swift */,
 				4F97ED8F2BA9F000008B3712 /* CommentQAViewController.swift */,
@@ -265,10 +292,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4FB1B65A2BBC5D37003C5372 /* Wind.mp3 in Resources */,
 				FB59948C2B82499400D43DE6 /* LaunchScreen.storyboard in Resources */,
+				4FB1B65E2BBC5D37003C5372 /* Rain.mp3 in Resources */,
 				95C53CE32B8F5802002C9C00 /* GoogleService-Info.plist in Resources */,
+				4FB1B6582BBC5D37003C5372 /* Birdsong.mp3 in Resources */,
 				FB5994892B82499400D43DE6 /* Assets.xcassets in Resources */,
+				4FB1B65D2BBC5D37003C5372 /* Ocean wave.mp3 in Resources */,
 				95C53CE52B8F582A002C9C00 /* img.json in Resources */,
+				4FB1B6592BBC5D37003C5372 /* Thunder.mp3 in Resources */,
 				FB5994872B82499300D43DE6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -285,13 +317,16 @@
 				95C53CE72B90AA98002C9C00 /* ImageCollectionViewCell.swift in Sources */,
 				4F411D932BB2699100183ABA /* Tool.swift in Sources */,
 				FB5D670E2B82634C009F65F7 /* SceneDelegate.swift in Sources */,
+				4FB1B65F2BBC5D37003C5372 /* AudioViewController.swift in Sources */,
 				4F97ED922BA9F5FF008B3712 /* EndingPageViewController.swift in Sources */,
 				8CC4EDED2B87FA9D00E1E860 /* NameQAViewController.swift in Sources */,
 				8CC4EDF32B8890C500E1E860 /* JobQAViewController.swift in Sources */,
 				4F97ED8A2BA9EAD1008B3712 /* ThemesQAViewController.swift in Sources */,
 				95C53CDB2B8E0524002C9C00 /* AvatarQAViewController.swift in Sources */,
 				4F97ED902BA9F000008B3712 /* CommentQAViewController.swift in Sources */,
+				4FB1B65B2BBC5D37003C5372 /* HomeViewController.swift in Sources */,
 				95C53CDD2B8E0568002C9C00 /* FeelQAViewController.swift in Sources */,
+				4F9D2E1C2BB3A3CA00B8AA6D /* CheckBoxListViewII.swift in Sources */,
 				FB32F5B22BAB2E8C00B32F1E /* UserProfileController.swift in Sources */,
 				8CC4EDF12B88903100E1E860 /* AgeQAViewController.swift in Sources */,
 				FB5994802B82499300D43DE6 /* AppDelegate.swift in Sources */,
@@ -304,6 +339,7 @@
 				40E4E53E2B90BEDB00DD24E3 /* CheckboxListView.swift in Sources */,
 				FB32F5A82BAA913D00B32F1E /* Health.swift in Sources */,
 				4F49FB662BA96583009A620E /* FrequencyQAViewController.swift in Sources */,
+				4FB1B65C2BBC5D37003C5372 /* UserProfileController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -449,10 +485,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = group_7/group_7.entitlements;
-				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 7644Q46CSX;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 4UV82BNFSA;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = group_7/Info.plist;
 				INFOPLIST_KEY_NSHealthShareUsageDescription = "Please share for app features.";
@@ -471,6 +508,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.washu.group-7";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = allTest_20230403;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -483,10 +521,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = group_7/group_7.entitlements;
-				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 7644Q46CSX;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 4UV82BNFSA;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = group_7/Info.plist;
 				INFOPLIST_KEY_NSHealthShareUsageDescription = "Please share for app features.";
@@ -505,6 +544,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.washu.group-7";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = allTest_20230403;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

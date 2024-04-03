@@ -9,7 +9,7 @@
 import UIKit
 import SwiftUI
 
-let arr = ["Meditation", "Listen to music", "Journal", "Reading", "Cooking", "Eating", "Exercise", "Take a nap", "Talk to someone", "Watch short videos", "Play mini games", "ETC."]
+let arr = ["Meditation", "Listen to music", "Journal", "Reading", "Cooking", "Eating", "Exercise", "Take a nap", "Talk to someone", "Watch short videos", "Play mini games"]
 
 var globalCheckboxData = arr.map { str in
     return CheckItem(title: str, state: false)

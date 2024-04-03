@@ -25,6 +25,8 @@ class CommentQAViewController:
         // Set up text field
         commentInput.borderStyle = .roundedRect
         commentInput.translatesAutoresizingMaskIntoConstraints = false // This is important when using Auto Layout
+        
+        commentInput.autocorrectionType = .no
 
         // Set up Auto Layout constraints
         NSLayoutConstraint.activate([

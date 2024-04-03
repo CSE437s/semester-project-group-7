@@ -6,6 +6,7 @@ import UIKit
 
 class LoginViewController: UIViewController {
     
+    
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     
@@ -15,20 +16,25 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        passwordTextField.isSecureTextEntry = true
+        emailTextField.autocorrectionType = .no
+        
         loginBox.applyShadowAndCorners()
         loginButton.applyShadowAndRoundedCorners()
+        
     }
+    
+
     
     @IBAction func loginUser(_ sender: UIButton) {
         guard let email = emailTextField.text, !email.isEmpty,
               let password = passwordTextField.text, !password.isEmpty else {
-            print("Email or password field is empty")
-            // TODO - show an alert to the user
+            showAlert(withMessage: "Email or password field cannot be empty.")
             return
         }
 
         guard let url = URL(string: "http://127.0.0.1:8000/user/login") else { return }
-        
+
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
@@ -42,36 +48,56 @@ class LoginViewController: UIViewController {
             let jsonData = try JSONSerialization.data(withJSONObject: parameters, options: [])
             request.httpBody = jsonData
         } catch {
-            print("Error serializing JSON: \(error.localizedDescription)")
+            showAlert(withMessage: "Error serializing JSON: \(error.localizedDescription)")
             return
         }
-        
+
         let task = URLSession.shared.dataTask(with: request) { data, response, error in
             DispatchQueue.main.async {
+                if let error = error {
+                    self.showAlert(withMessage: "Request error: \(error.localizedDescription)")
+                    return
+                }
+
                 guard let httpResponse = response as? HTTPURLResponse,
                       httpResponse.statusCode == 200 else {
-                    print("HTTP error")
+                    self.showAlert(withMessage: "HTTP error or server not responding with 200 OK.")
                     return
                 }
 
                 guard let data = data else {
-                    print("No data error")
+                    self.showAlert(withMessage: "No data received from server.")
                     return
                 }
-            
+
                 do {
-                    if let jsonResponse = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any],
-                       let status = jsonResponse["status"] as? Int, status == 0,
-                       let userSer = jsonResponse["results"] as? [String: Any], let userID = userSer["id"] as? Int {
-                        UserDefaults.standard.set(userID, forKey: "userID")
-                        // Perform segue or update UI to reflect successful login
+                    if let jsonResponse = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any] {
+                        // Ensure that all logic that uses jsonResponse is within this block
+                        if let status = jsonResponse["status"] as? Int, status == 0,
+                           let userSer = jsonResponse["results"] as? [String: Any], let userID = userSer["id"] as? Int {
+                            UserDefaults.standard.set(userID, forKey: "userID")
+                            // Perform segue programmatically since login is successful
+                            self.performSegue(withIdentifier: "loginToNextVC", sender: self)
+                        } else {
+                            // Handle login failure based on server response
+                            let message = jsonResponse["msg"] as? String ?? "Login failed due to unknown error."
+                            self.showAlert(withMessage: message)
+                        }
                     }
                 } catch {
-                    print("JSON parsing error: \(error.localizedDescription)")
+                    self.showAlert(withMessage: "JSON parsing error: \(error.localizedDescription)")
                 }
             }
         }
         task.resume()
+
+
+    }
+
+    func showAlert(withMessage message: String) {
+        let alert = UIAlertController(title: "Login Error", message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        present(alert, animated: true, completion: nil)
     }
 
 

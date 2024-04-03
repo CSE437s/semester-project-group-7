@@ -19,6 +19,8 @@ class NameQAViewController:
         //同时按下次数
         tapSingle.numberOfTouchesRequired = 1
         self.view.addGestureRecognizer(tapSingle)
+        
+        nameInput.autocorrectionType = .no
     }
     
     @objc func Tap(_ cognizer:UITapGestureRecognizer) {

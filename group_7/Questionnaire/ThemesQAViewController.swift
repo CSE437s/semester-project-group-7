@@ -8,9 +8,9 @@
 import UIKit
 import SwiftUI
 
-let arr2 = ["Stress reduction", "Sleep improvement", "Focus and concentration", "Emotional well-being", "Relationships", "Work-life balance", "Body awareness", "ETC."]
+let arr2 = ["Stress reduction", "Sleep improvement", "Focus and concentration", "Emotional well-being", "Relationships", "Work-life balance", "Body awareness"]
 
-var globalcheckboxData = arr2.map { str in
+var globalCheckboxData2 = arr2.map { str in
     return CheckItem(title: str, state: false)
 }
 
@@ -24,7 +24,7 @@ class ThemesQAViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
        
-        let sView = CheckboxListView()
+        let sView = CheckboxListViewII()
         let hostingController = UIHostingController(rootView: sView)
          addChild(hostingController)
         hostingController.view.translatesAutoresizingMaskIntoConstraints = false

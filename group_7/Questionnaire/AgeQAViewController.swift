@@ -19,6 +19,7 @@ class AgeQAViewController:
         //同时按下次数
         tapSingle.numberOfTouchesRequired = 1
         self.view.addGestureRecognizer(tapSingle)
+    
     }
     
     @objc func Tap(_ cognizer:UITapGestureRecognizer)

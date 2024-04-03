@@ -465,37 +465,53 @@ struct ProfileView: View {
         self.healthStore.execute(query)
     }
     
+    private func fetchecg() {
+        let ecgType = HKSampleType.electrocardiogramType()
+        let query = HKSampleQuery(sampleType: ecgType, predicate: nil, limit: 1, sortDescriptors: nil) { (query, results, error) in
+            if let result = results?.first as? HKQuantitySample{
+//                let sample: Double = result.quantity.doubleValue(for: .second())*100
+//                bodyTemperatureData.append(StressScoreData(value: sample, label: ""))
+                print("ECG => \(result.quantity)")
+//                print(sample)
+            }else{
+//                bodyTemperatureData.append(StressScoreData(value: 0, label: ""))
+                print("OOPS didnt get ECG\nResults => \(String(describing: results)), error => \(String(describing: error))")
+            }
+        }
+        self.healthStore.execute(query)
+    }
     
-    //           private func fetchBodyTemperatureData() {
-    //               guard HKHealthStore.isHealthDataAvailable(),
-    //                     let bodyTemperatureType = HKObjectType.quantityType(forIdentifier: .bodyTemperature) else {
-    //                   return
-    //               }
-    //
-    //               let now = Date()
-    //               let startOfDay = Calendar.current.startOfDay(for: now)
-    //               let predicate = HKQuery.predicateForSamples(withStart: startOfDay.addingTimeInterval(-7 * 24 * 60 * 60), end: now, options: .strictStartDate)
-    //
-    //               let query = HKSampleQuery(sampleType: bodyTemperatureType, predicate: predicate, limit: HKObjectQueryNoLimit, sortDescriptors: [NSSortDescriptor(key: HKSampleSortIdentifierStartDate, ascending: true)]) { _, results, _ in
-    //                   guard let samples = results as? [HKQuantitySample] else {
-    //                       return
-    //                   }
-    //
-    //                   let dateFormatter = DateFormatter()
-    //                   dateFormatter.dateFormat = "E"
-    //
-    //                   let data = samples.map { sample in
-    //                       StressScoreData(value: sample.quantity.doubleValue(for: HKUnit.degreeFahrenheit()), label: dateFormatter.string(from: sample.startDate))
-    //                   }
-    //
-    //                   DispatchQueue.main.async {
-    //                       self.bodyTemperatureData = data
-    //                   }
-    //               }
-    //               HKHealthStore().execute(query)
-    //           }
-    //       }
+    private func fetcheda() {
+        let edaType = HKSampleType.quantityType(forIdentifier: .electrodermalActivity)!
+        let query = HKSampleQuery(sampleType: edaType, predicate: nil, limit: 1, sortDescriptors: nil) { (query, results, error) in
+            if let result = results?.first as? HKQuantitySample{
+//                let sample: Double = result.quantity.doubleValue(for: .second())*100
+//                bodyTemperatureData.append(StressScoreData(value: sample, label: ""))
+                print("EDA => \(result.quantity)")
+//                print(sample)
+            }else{
+//                bodyTemperatureData.append(StressScoreData(value: 0, label: ""))
+                print("OOPS didnt get EDA\nResults => \(String(describing: results)), error => \(String(describing: error))")
+            }
+        }
+        self.healthStore.execute(query)
+    }
     
+    private func fetchTemp() {
+        let tempType = HKSampleType.quantityType(forIdentifier: .bodyTemperature)!
+        let query = HKSampleQuery(sampleType: tempType, predicate: nil, limit: 1, sortDescriptors: nil) { (query, results, error) in
+            if let result = results?.first as? HKQuantitySample{
+//                let sample: Double = result.quantity.doubleValue(for: .second())*100
+//                bodyTemperatureData.append(StressScoreData(value: sample, label: ""))
+                print("Temperature => \(result.quantity)")
+//                print(sample)
+            }else{
+//                bodyTemperatureData.append(StressScoreData(value: 0, label: ""))
+                print("OOPS didnt get Temperature\nResults => \(String(describing: results)), error => \(String(describing: error))")
+            }
+        }
+        self.healthStore.execute(query)
+    }
     
     
     struct StressScoreData: Hashable {

@@ -14,6 +14,9 @@ class SignUpViewController: UIViewController {
         signupBox.applyShadowAndCorners()
         signupButton.applyShadowAndRoundedCorners()
         
+        passwordTextField.isSecureTextEntry = true
+        emailTextField.autocorrectionType = .no
+        
     }
 
     @IBAction func buttonClicked(_ sender: UIButton) {
