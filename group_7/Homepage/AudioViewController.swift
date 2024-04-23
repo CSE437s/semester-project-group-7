@@ -28,17 +28,57 @@ class AudioViewController: UIViewController {
         
         let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
         backgroundImage.image = UIImage(named: "Nature")
-        backgroundImage.contentMode = .scaleAspectFill
-        view.insertSubview(backgroundImage, at: 0)
         
         let textLabel = UILabel(frame: CGRect(x:100, y:150, width: 200, height: 200))
         textLabel.text = "Relaxing\nNature\nSounds"
-        textLabel.textColor = .white
+
+        var soundNmaes: [String] = []
+        var backgroundColor = UIColor(red: 160/255, green: 190/255, blue: 223/255, alpha: 1)
+        var borderColor: CGColor?
+        
+        if let receivedData = data {
+            if receivedData == 0 {
+                textLabel.textColor = .white
+                backgroundImage.image = UIImage(named: "piano")
+                textLabel.text = "Relaxing\nInstrument\nSounds"
+                soundNmaes = ["Rain", "Wind", "Thunder", "Ocean wave", "Birdsong"]
+                backgroundColor = UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 1)
+                borderColor = UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 1).cgColor
+                textLabel.layer.borderColor = UIColor(red: 0/255, green: 0/255, blue: 0/255, alpha: 1).cgColor
+                textLabel.backgroundColor = UIColor(red: 0/255, green: 0/255, blue: 0/255, alpha: 1)
+            }
+            else if receivedData == 1 {
+                textLabel.textColor = .white
+                backgroundImage.image = UIImage(named: "Nature")
+                textLabel.text = "Relaxing\nNature\nSounds"
+                soundNmaes = ["Rain", "Wind", "Thunder", "Ocean wave", "Birdsong"]
+                backgroundColor = UIColor(red: 160/255, green: 190/255, blue: 223/255, alpha: 1)
+                borderColor = UIColor(red: 160/255, green: 190/255, blue: 223/255, alpha: 1).cgColor
+                textLabel.layer.borderColor = UIColor(red: 24/255, green: 52/255, blue: 123/255, alpha: 1).cgColor
+                textLabel.backgroundColor = UIColor(red: 24/255, green: 52/255, blue: 123/255, alpha: 1)
+            }
+            else if receivedData == 2 {
+                textLabel.textColor = .white
+                backgroundImage.image = UIImage(named: "whitepink")
+                textLabel.text = "Relaxing\nWhite Pink\nNoises"
+                soundNmaes = ["Rain", "Wind", "Thunder", "Ocean wave", "Birdsong"]
+                backgroundColor = UIColor(red: 240/255, green: 179/255, blue: 174/255, alpha: 1)
+                borderColor = UIColor(red: 240/255, green: 179/255, blue: 174/255, alpha: 1).cgColor
+                textLabel.layer.borderColor = UIColor(red: 229/255, green: 127/255, blue: 118/255, alpha: 1).cgColor
+                textLabel.backgroundColor = UIColor(red: 229/255, green: 127/255, blue: 118/255, alpha: 1)
+            }
+        }
+                
+        backgroundImage.contentMode = .scaleAspectFill
+        view.insertSubview(backgroundImage, at: 0)
+                
+        
         textLabel.textAlignment = .center
         textLabel.numberOfLines = 0
-        textLabel.backgroundColor = .clear
+        //textLabel.backgroundColor = .clear
 //        textLabel.layer(radius: textLabel.frame.height/2, borderWidth: 2, borderColor: .blue)
-
+        
+        
         let numberOfCircles = 3
         let gapBetweenCircles: CGFloat = 10
 
@@ -52,10 +92,10 @@ class AudioViewController: UIViewController {
                 height: expansion
             )
 
-            circleView.backgroundColor = UIColor(red: 160/255, green: 190/255, blue: 223/255, alpha: 1) // Change as desired
+            circleView.backgroundColor = backgroundColor // Change as desired
             circleView.layer.cornerRadius = expansion / 2
             circleView.layer.borderWidth = 2
-            circleView.layer.borderColor = UIColor(red: 160/255, green: 190/255, blue: 223/255, alpha: 1).cgColor
+            circleView.layer.borderColor = borderColor
             circleView.clipsToBounds = true
 
            
@@ -65,8 +105,7 @@ class AudioViewController: UIViewController {
     
         textLabel.layer.cornerRadius = textLabel.frame.width / 2
         textLabel.layer.borderWidth = 2
-        textLabel.layer.borderColor = UIColor(red: 160/255, green: 190/255, blue: 223/255, alpha: 1).cgColor
-        textLabel.backgroundColor = UIColor(red: 24/255, green: 52/255, blue: 123/255, alpha: 1)
+        
         textLabel.clipsToBounds = true
 
         textLabel.font = .boldSystemFont(ofSize: 20)
@@ -89,16 +128,15 @@ class AudioViewController: UIViewController {
             slider.addTarget(self, action: #selector(sliderValueChange(_:)), for: .valueChanged)
             slider.transform = CGAffineTransform(rotationAngle: -CGFloat.pi / 2)
             slider.backgroundColor = .clear
-            slider.tintColor = UIColor(red: 24/255, green: 52/255, blue: 123/255, alpha: 1)
+            slider.tintColor = textLabel.backgroundColor
             view.addSubview(slider)
             sliders.append(slider)
         }
         
-        let soundNmaes = ["Rain", "Wind", "Thunder", "Ocean wave", "Birdsong"]
         for(index, soundName) in soundNmaes.enumerated() {
             let label = UILabel(frame: CGRect(x: (index*80), y: Int(startY+sliderWidth)-40, width: 70, height: 20))
             label.text = soundName
-            label.textColor = .blue
+            label.textColor = textLabel.backgroundColor
             label.textAlignment = .center
             label.backgroundColor = .white
             label.font = UIFont.systemFont(ofSize: 9)

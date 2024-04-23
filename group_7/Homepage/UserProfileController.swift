@@ -360,62 +360,93 @@ class UserProfileController: UIViewController{
 
 struct ProfileView: View {
     //@State private var fetchedData: String = ""
-    @State private var bodyTemperatureData: [StressScoreData] = []
+    @State private var bodyTemperatureData: [StressScoreData] = [
+        StressScoreData(value: 36.6, label: "M"),
+        StressScoreData(value: 37.1, label: "Tu"),
+        StressScoreData(value: 37.5, label: "W"),
+        StressScoreData(value: 36.8, label: "Th"),
+        StressScoreData(value: 36.7, label: "F"),
+        StressScoreData(value: 37.2, label: "Sa"),
+        StressScoreData(value: 36.9, label: "Su")
+    ]
     private let healthStore = HKHealthStore()
     
     var body: some View {
-        ScrollView {
-            VStack(alignment: .leading) {
-                Text("Stress Score: Rest")
-                    .font(.largeTitle)
-                    .foregroundStyle(.black)
-                    .multilineTextAlignment(.leading)
-                    .padding(.bottom, 1)
-                
-                if bodyTemperatureData.isEmpty {
-                    Text("No data available")
+            ScrollView {
+                VStack(alignment: .leading) {
+                    Text("Stress Score: Rest")
+                        .font(.largeTitle)
                         .foregroundStyle(.black)
-                        .padding()
-                } else {
-                    // Ensure that bodyTemperatureData contains at least two points
-                    if bodyTemperatureData.count >= 2 {
-                        HStack {
-                            Spacer()
-                            LineChartView(data: bodyTemperatureData.map { $0.value }, title: "Stress", legend: "Daily Average")
-                                .frame(height: 250)
-                            Spacer()
-                        }
-                        
-                        HStack {
-                            Spacer()
-                            ForEach(bodyTemperatureData, id: \.self) { data in
-                                Text(data.label)
-                                    .frame(maxWidth: 20, alignment: .center)
-                            }
-                            Spacer()
-                        }
-                    } else {
-                        Text("Insufficient data points for line chart")
+                        .multilineTextAlignment(.leading)
+                        .padding(.bottom, 1)
+
+                    if bodyTemperatureData.isEmpty {
+                        Text("No data available")
+                            .foregroundStyle(.black)
                             .padding()
+                    } else {
+                        if bodyTemperatureData.count >= 2 {
+                            HStack {
+                                Spacer()
+                                LineChartView(data: bodyTemperatureData.map { $0.value }, title: "Body Temperature", legend: "Last 7 Days")
+                                    .frame(height: 250)
+                                Spacer()
+                            }
+
+                            HStack {
+                               Spacer()
+                               ForEach(bodyTemperatureData, id: \.self) { data in
+                                   Text(data.label)
+                                       .frame(maxWidth: 20, alignment: .center)
+                               }
+                               Spacer()
+                           }
+                        } else {
+                            Text("Insufficient data points for line chart")
+                                .padding()
+                        }
                     }
                 }
             }
+            .background(Color.white)
+            .cornerRadius(20)
+            .padding()
+            .onAppear {
+//                fetchTemp()
+            }
         }
-        .background(Color.white)
-        .cornerRadius(20)
-        .padding()
-        .onAppear {
-            fetchHeight()
-            fetchWalkingSpeed()
-            fetchtbvp()
+
+        private func fetchTemp() {
+            guard let tempType = HKSampleType.quantityType(forIdentifier: .bodyTemperature) else {
+                return
+            }
+
+            let calendar = Calendar.current
+            let endDate = Date()
+            let startDate = calendar.date(byAdding: .day, value: -7, to: endDate)!
+
+            let predicate = HKQuery.predicateForSamples(withStart: startDate, end: endDate, options: .strictEndDate)
+            let sortDescriptor = NSSortDescriptor(key: HKSampleSortIdentifierStartDate, ascending: true)
+
+            let query = HKSampleQuery(sampleType: tempType, predicate: predicate, limit: HKObjectQueryNoLimit, sortDescriptors: [sortDescriptor]) { _, results, error in
+                guard let samples = results as? [HKQuantitySample], error == nil else {
+                    print("Error fetching temperature samples: \(String(describing: error))")
+                    return
+                }
+
+                DispatchQueue.main.async {
+                    self.bodyTemperatureData = samples.map { sample in
+                        let value = sample.quantity.doubleValue(for: .degreeFahrenheit())
+                        let dateFormatter = DateFormatter()
+                        dateFormatter.dateFormat = "E"
+                        return StressScoreData(value: value, label: dateFormatter.string(from: sample.startDate))
+                    }
+                }
+            }
+
+            healthStore.execute(query)
         }
-//        .overlay(
-//            VStack{
-//                Text(fetchedData)
-//                    .foregroundStyle(.black)
-//            })
-    }
-    
+
     private func fetchHeight() {
         let heightType = HKSampleType.quantityType(forIdentifier: HKQuantityTypeIdentifier.height)!
         let query = HKSampleQuery(sampleType: heightType, predicate: nil, limit: 1, sortDescriptors: nil) { (query, results, error) in
@@ -496,23 +527,6 @@ struct ProfileView: View {
         }
         self.healthStore.execute(query)
     }
-    
-    private func fetchTemp() {
-        let tempType = HKSampleType.quantityType(forIdentifier: .bodyTemperature)!
-        let query = HKSampleQuery(sampleType: tempType, predicate: nil, limit: 1, sortDescriptors: nil) { (query, results, error) in
-            if let result = results?.first as? HKQuantitySample{
-//                let sample: Double = result.quantity.doubleValue(for: .second())*100
-//                bodyTemperatureData.append(StressScoreData(value: sample, label: ""))
-                print("Temperature => \(result.quantity)")
-//                print(sample)
-            }else{
-//                bodyTemperatureData.append(StressScoreData(value: 0, label: ""))
-                print("OOPS didnt get Temperature\nResults => \(String(describing: results)), error => \(String(describing: error))")
-            }
-        }
-        self.healthStore.execute(query)
-    }
-    
     
     struct StressScoreData: Hashable {
         let value: Double

@@ -961,15 +961,16 @@
             </objects>
             <point key="canvasLocation" x="15584" y="1020"/>
         </scene>
-        <!--View Controller-->
+        <!--Chat View Controller-->
         <scene sceneID="95J-f9-b6p">
             <objects>
-                <viewController id="eJT-iq-Iol" sceneMemberID="viewController">
+                <viewController id="eJT-iq-Iol" customClass="ChatViewController" customModule="group_7" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="d6W-El-onN">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="ohD-82-LHY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" name="AccentColor"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="chat" id="Ygn-JM-Kg8"/>
                 </viewController>
@@ -977,37 +978,67 @@
             </objects>
             <point key="canvasLocation" x="14644" y="1020"/>
         </scene>
-        <!--View Controller-->
+        <!--Mindfulness View Controller-->
         <scene sceneID="Eng-6h-zRJ">
             <objects>
-                <viewController id="3vd-8g-9CR" sceneMemberID="viewController">
+                <viewController id="3vd-8g-9CR" customClass="MindfulnessViewController" customModule="group_7" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="SXb-Xo-h9I">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mQN-wU-Xbw">
+                                <rect key="frame" x="0.0" y="120" width="393" height="649"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.97213232510000003" blue="0.78885682830000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </view>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Mindfulness" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="NRV-Lb-Ghq">
+                                <rect key="frame" x="76" y="65" width="240" height="47"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" name="AccentColor"/>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="E4B-db-3b1"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="AccentColor"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="lotus" id="VYE-LR-3pM"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GZw-Gn-nq8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="13727" y="1021"/>
+            <point key="canvasLocation" x="13725.954198473282" y="1020.4225352112677"/>
         </scene>
-        <!--View Controller-->
+        <!--Music View Controller-->
         <scene sceneID="qBl-3B-AtC">
             <objects>
-                <viewController id="XbR-TD-54k" sceneMemberID="viewController">
+                <viewController id="XbR-TD-54k" customClass="MusicViewController" customModule="group_7" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="PYJ-Zm-3MP">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="haC-b3-v7j">
+                                <rect key="frame" x="0.0" y="120" width="393" height="649"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.97213232510000003" blue="0.78885682830000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </view>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Music &amp; Soundspace" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="SeM-3x-gK3">
+                                <rect key="frame" x="76" y="65" width="240" height="47"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" name="AccentColor"/>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="Q1x-8w-Uw8"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="AccentColor"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="music" id="qwk-ZT-KKP"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rSS-Xc-I00" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="12779" y="1021"/>
+            <point key="canvasLocation" x="12777.862595419847" y="1020.4225352112677"/>
         </scene>
         <!--Home Page View Controller-->
         <scene sceneID="x4T-P2-W9P">
@@ -1211,7 +1242,7 @@
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGray6Color">
-            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemYellowColor">
             <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

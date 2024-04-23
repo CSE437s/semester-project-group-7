@@ -30,6 +30,8 @@
 		4FB1B65F2BBC5D37003C5372 /* AudioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FB1B6572BBC5D37003C5372 /* AudioViewController.swift */; };
 		8C2D26052BAC0678003DD5F2 /* SpeziHealthKit in Frameworks */ = {isa = PBXBuildFile; productRef = 8C2D26042BAC0678003DD5F2 /* SpeziHealthKit */; };
 		8C2D26082BAC0963003DD5F2 /* SpeziOnboarding in Frameworks */ = {isa = PBXBuildFile; productRef = 8C2D26072BAC0963003DD5F2 /* SpeziOnboarding */; };
+		8CB64BF22BCE4AA900892A85 /* OpenAISwift in Frameworks */ = {isa = PBXBuildFile; productRef = 8CB64BF12BCE4AA900892A85 /* OpenAISwift */; };
+		8CB64BF42BCE4ACA00892A85 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB64BF32BCE4ACA00892A85 /* ChatViewController.swift */; };
 		8CC4EDED2B87FA9D00E1E860 /* NameQAViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC4EDEC2B87FA9D00E1E860 /* NameQAViewController.swift */; };
 		8CC4EDF12B88903100E1E860 /* AgeQAViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC4EDF02B88903100E1E860 /* AgeQAViewController.swift */; };
 		8CC4EDF32B8890C500E1E860 /* JobQAViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC4EDF22B8890C500E1E860 /* JobQAViewController.swift */; };
@@ -41,7 +43,6 @@
 		95C53CE52B8F582A002C9C00 /* img.json in Resources */ = {isa = PBXBuildFile; fileRef = 95C53CE42B8F582A002C9C00 /* img.json */; };
 		95C53CE72B90AA98002C9C00 /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C53CE62B90AA98002C9C00 /* ImageCollectionViewCell.swift */; };
 		FB32F5A82BAA913D00B32F1E /* Health.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB32F5A72BAA913D00B32F1E /* Health.swift */; };
-		FB32F5B22BAB2E8C00B32F1E /* UserProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB32F5B12BAB2E8C00B32F1E /* UserProfileController.swift */; };
 		FB50399F2BAD11FD0028DFD0 /* SwiftUICharts in Frameworks */ = {isa = PBXBuildFile; productRef = FB50399E2BAD11FD0028DFD0 /* SwiftUICharts */; };
 		FB5994802B82499300D43DE6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB59947F2B82499300D43DE6 /* AppDelegate.swift */; };
 		FB5994842B82499300D43DE6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5994832B82499300D43DE6 /* ViewController.swift */; };
@@ -56,6 +57,23 @@
 		FB5D66EC2B8252DA009F65F7 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = FB5D66EB2B8252DA009F65F7 /* FirebaseAuth */; };
 		FB5D66EE2B8252DA009F65F7 /* FirebaseAuthCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = FB5D66ED2B8252DA009F65F7 /* FirebaseAuthCombine-Community */; };
 		FB5D670E2B82634C009F65F7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5D670D2B82634C009F65F7 /* SceneDelegate.swift */; };
+		FBA194962BD47D63008E7466 /* meditation.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = FBA194952BD47D63008E7466 /* meditation.mp4 */; };
+		FBA194982BD47F6F008E7466 /* Calm.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = FBA194972BD47F6F008E7466 /* Calm.mp4 */; };
+		FBA1949A2BD481D1008E7466 /* journal.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = FBA194992BD481D1008E7466 /* journal.mp4 */; };
+		FBA1949C2BD48C9B008E7466 /* pinknoise.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FBA1949B2BD48C9B008E7466 /* pinknoise.mp3 */; };
+		FBA1949E2BD48CA4008E7466 /* whitenoise.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FBA1949D2BD48CA4008E7466 /* whitenoise.mp3 */; };
+		FBA194A02BD48E36008E7466 /* Traditional Korean Music.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = FBA1949F2BD48E36008E7466 /* Traditional Korean Music.mp4 */; };
+		FBA194A22BD48F04008E7466 /* Arirang.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = FBA194A12BD48F04008E7466 /* Arirang.mp4 */; };
+		FBA194A42BD4916D008E7466 /* Classicmusic.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = FBA194A32BD4916D008E7466 /* Classicmusic.mp4 */; };
+		FBA194A62BD49E53008E7466 /* Meditation practice.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = FBA194A52BD49E53008E7466 /* Meditation practice.mp4 */; };
+		FBA194A82BD49E5B008E7466 /* Breathing practice.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = FBA194A72BD49E5B008E7466 /* Breathing practice.mp4 */; };
+		FBA194AA2BD49E64008E7466 /* Yoga practice.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = FBA194A92BD49E64008E7466 /* Yoga practice.mp4 */; };
+		FBA194AC2BD4A47D008E7466 /* MusicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA194AB2BD4A47D008E7466 /* MusicViewController.swift */; };
+		FBA194AE2BD4A555008E7466 /* MindfulnessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA194AD2BD4A555008E7466 /* MindfulnessViewController.swift */; };
+		FBA194B02BD4E517008E7466 /* VideoViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA194AF2BD4E517008E7466 /* VideoViewController2.swift */; };
+		FBA194B22BD4E9DD008E7466 /* VideoViewController3.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA194B12BD4E9DD008E7466 /* VideoViewController3.swift */; };
+		FBA194B42BD4F033008E7466 /* popmusic.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = FBA194B32BD4F033008E7466 /* popmusic.mp4 */; };
+		FBA4F0AE2BD3793700BB200B /* VideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA4F0AD2BD3793700BB200B /* VideoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -77,6 +95,7 @@
 		4FB1B6552BBC5D37003C5372 /* Ocean wave.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Ocean wave.mp3"; sourceTree = "<group>"; };
 		4FB1B6562BBC5D37003C5372 /* Rain.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Rain.mp3; sourceTree = "<group>"; };
 		4FB1B6572BBC5D37003C5372 /* AudioViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioViewController.swift; sourceTree = "<group>"; };
+		8CB64BF32BCE4ACA00892A85 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		8CC4EDEC2B87FA9D00E1E860 /* NameQAViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameQAViewController.swift; sourceTree = "<group>"; };
 		8CC4EDF02B88903100E1E860 /* AgeQAViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgeQAViewController.swift; sourceTree = "<group>"; };
 		8CC4EDF22B8890C500E1E860 /* JobQAViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobQAViewController.swift; sourceTree = "<group>"; };
@@ -87,7 +106,6 @@
 		95C53CE42B8F582A002C9C00 /* img.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = img.json; sourceTree = "<group>"; };
 		95C53CE62B90AA98002C9C00 /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
 		FB32F5A72BAA913D00B32F1E /* Health.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Health.swift; sourceTree = "<group>"; };
-		FB32F5B12BAB2E8C00B32F1E /* UserProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileController.swift; sourceTree = "<group>"; };
 		FB32F5B42BABD0EB00B32F1E /* group_7.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = group_7.entitlements; sourceTree = "<group>"; };
 		FB59947C2B82499300D43DE6 /* group_7.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = group_7.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB59947F2B82499300D43DE6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -100,6 +118,23 @@
 		FB5994D52B824B4400D43DE6 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		FB5994D72B824B6100D43DE6 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		FB5D670D2B82634C009F65F7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		FBA194952BD47D63008E7466 /* meditation.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = meditation.mp4; sourceTree = "<group>"; };
+		FBA194972BD47F6F008E7466 /* Calm.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = Calm.mp4; path = ../../../Calm.mp4; sourceTree = "<group>"; };
+		FBA194992BD481D1008E7466 /* journal.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = journal.mp4; sourceTree = "<group>"; };
+		FBA1949B2BD48C9B008E7466 /* pinknoise.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = pinknoise.mp3; sourceTree = "<group>"; };
+		FBA1949D2BD48CA4008E7466 /* whitenoise.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = whitenoise.mp3; sourceTree = "<group>"; };
+		FBA1949F2BD48E36008E7466 /* Traditional Korean Music.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Traditional Korean Music.mp4"; sourceTree = "<group>"; };
+		FBA194A12BD48F04008E7466 /* Arirang.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Arirang.mp4; sourceTree = "<group>"; };
+		FBA194A32BD4916D008E7466 /* Classicmusic.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Classicmusic.mp4; sourceTree = "<group>"; };
+		FBA194A52BD49E53008E7466 /* Meditation practice.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Meditation practice.mp4"; sourceTree = "<group>"; };
+		FBA194A72BD49E5B008E7466 /* Breathing practice.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Breathing practice.mp4"; sourceTree = "<group>"; };
+		FBA194A92BD49E64008E7466 /* Yoga practice.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Yoga practice.mp4"; sourceTree = "<group>"; };
+		FBA194AB2BD4A47D008E7466 /* MusicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicViewController.swift; sourceTree = "<group>"; };
+		FBA194AD2BD4A555008E7466 /* MindfulnessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MindfulnessViewController.swift; sourceTree = "<group>"; };
+		FBA194AF2BD4E517008E7466 /* VideoViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoViewController2.swift; sourceTree = "<group>"; };
+		FBA194B12BD4E9DD008E7466 /* VideoViewController3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoViewController3.swift; sourceTree = "<group>"; };
+		FBA194B32BD4F033008E7466 /* popmusic.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = popmusic.mp4; sourceTree = "<group>"; };
+		FBA4F0AD2BD3793700BB200B /* VideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +146,7 @@
 				FB5994CE2B824A0700D43DE6 /* GoogleSignInSwift in Frameworks */,
 				40E4E53C2B8F745D00DD24E3 /* SwiftyJSON in Frameworks */,
 				FB5D66EC2B8252DA009F65F7 /* FirebaseAuth in Frameworks */,
+				8CB64BF22BCE4AA900892A85 /* OpenAISwift in Frameworks */,
 				FB5994CC2B824A0700D43DE6 /* GoogleSignIn in Frameworks */,
 				FB5D66EE2B8252DA009F65F7 /* FirebaseAuthCombine-Community in Frameworks */,
 				40E4E5392B8F71F100DD24E3 /* SDWebImageMapKit in Frameworks */,
@@ -128,16 +164,33 @@
 			isa = PBXGroup;
 			children = (
 				4FB1B6532BBC5D37003C5372 /* HomeViewController.swift */,
+				FBA194AB2BD4A47D008E7466 /* MusicViewController.swift */,
+				FBA194AD2BD4A555008E7466 /* MindfulnessViewController.swift */,
+				FBA194952BD47D63008E7466 /* meditation.mp4 */,
+				FBA194972BD47F6F008E7466 /* Calm.mp4 */,
+				FBA194992BD481D1008E7466 /* journal.mp4 */,
+				FBA1949F2BD48E36008E7466 /* Traditional Korean Music.mp4 */,
+				FBA194A12BD48F04008E7466 /* Arirang.mp4 */,
+				FBA194A32BD4916D008E7466 /* Classicmusic.mp4 */,
+				FBA194B32BD4F033008E7466 /* popmusic.mp4 */,
+				FBA194A52BD49E53008E7466 /* Meditation practice.mp4 */,
+				FBA194A72BD49E5B008E7466 /* Breathing practice.mp4 */,
+				FBA194A92BD49E64008E7466 /* Yoga practice.mp4 */,
 				4FB1B6572BBC5D37003C5372 /* AudioViewController.swift */,
 				4FB1B6502BBC5D37003C5372 /* Birdsong.mp3 */,
 				4FB1B6552BBC5D37003C5372 /* Ocean wave.mp3 */,
 				4FB1B6562BBC5D37003C5372 /* Rain.mp3 */,
 				4FB1B6512BBC5D37003C5372 /* Thunder.mp3 */,
 				4FB1B6522BBC5D37003C5372 /* Wind.mp3 */,
+				FBA1949B2BD48C9B008E7466 /* pinknoise.mp3 */,
+				FBA1949D2BD48CA4008E7466 /* whitenoise.mp3 */,
 				4FB1B6542BBC5D37003C5372 /* UserProfileController.swift */,
 				FB32F5A72BAA913D00B32F1E /* Health.swift */,
-				FB32F5B12BAB2E8C00B32F1E /* UserProfileController.swift */,
 				4F411D922BB2699000183ABA /* Tool.swift */,
+				8CB64BF32BCE4ACA00892A85 /* ChatViewController.swift */,
+				FBA4F0AD2BD3793700BB200B /* VideoViewController.swift */,
+				FBA194AF2BD4E517008E7466 /* VideoViewController2.swift */,
+				FBA194B12BD4E9DD008E7466 /* VideoViewController3.swift */,
 			);
 			path = Homepage;
 			sourceTree = "<group>";
@@ -239,6 +292,7 @@
 				8C2D26072BAC0963003DD5F2 /* SpeziOnboarding */,
 				FB50399E2BAD11FD0028DFD0 /* SwiftUICharts */,
 				8CC769F42BAD5EA50076B604 /* LineChartView */,
+				8CB64BF12BCE4AA900892A85 /* OpenAISwift */,
 			);
 			productName = group_7;
 			productReference = FB59947C2B82499300D43DE6 /* group_7.app */;
@@ -277,6 +331,7 @@
 				8C2D26062BAC0963003DD5F2 /* XCRemoteSwiftPackageReference "SpeziOnboarding" */,
 				FB50399D2BAD11FD0028DFD0 /* XCRemoteSwiftPackageReference "ChartView" */,
 				8CC769F32BAD5EA50076B604 /* XCRemoteSwiftPackageReference "LineChartView" */,
+				8CB64BF02BCE4AA900892A85 /* XCRemoteSwiftPackageReference "OpenAISwift" */,
 			);
 			productRefGroup = FB59947D2B82499300D43DE6 /* Products */;
 			projectDirPath = "";
@@ -292,16 +347,28 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FBA194A82BD49E5B008E7466 /* Breathing practice.mp4 in Resources */,
 				4FB1B65A2BBC5D37003C5372 /* Wind.mp3 in Resources */,
 				FB59948C2B82499400D43DE6 /* LaunchScreen.storyboard in Resources */,
 				4FB1B65E2BBC5D37003C5372 /* Rain.mp3 in Resources */,
+				FBA194962BD47D63008E7466 /* meditation.mp4 in Resources */,
+				FBA194AA2BD49E64008E7466 /* Yoga practice.mp4 in Resources */,
 				95C53CE32B8F5802002C9C00 /* GoogleService-Info.plist in Resources */,
+				FBA194A22BD48F04008E7466 /* Arirang.mp4 in Resources */,
 				4FB1B6582BBC5D37003C5372 /* Birdsong.mp3 in Resources */,
 				FB5994892B82499400D43DE6 /* Assets.xcassets in Resources */,
+				FBA194A02BD48E36008E7466 /* Traditional Korean Music.mp4 in Resources */,
 				4FB1B65D2BBC5D37003C5372 /* Ocean wave.mp3 in Resources */,
+				FBA1949A2BD481D1008E7466 /* journal.mp4 in Resources */,
+				FBA194A62BD49E53008E7466 /* Meditation practice.mp4 in Resources */,
+				FBA1949C2BD48C9B008E7466 /* pinknoise.mp3 in Resources */,
+				FBA1949E2BD48CA4008E7466 /* whitenoise.mp3 in Resources */,
+				FBA194982BD47F6F008E7466 /* Calm.mp4 in Resources */,
+				FBA194A42BD4916D008E7466 /* Classicmusic.mp4 in Resources */,
 				95C53CE52B8F582A002C9C00 /* img.json in Resources */,
 				4FB1B6592BBC5D37003C5372 /* Thunder.mp3 in Resources */,
 				FB5994872B82499300D43DE6 /* Main.storyboard in Resources */,
+				FBA194B42BD4F033008E7466 /* popmusic.mp4 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -313,13 +380,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				FB5994D62B824B4400D43DE6 /* SignUpViewController.swift in Sources */,
+				FBA194AE2BD4A555008E7466 /* MindfulnessViewController.swift in Sources */,
 				FB5994842B82499300D43DE6 /* ViewController.swift in Sources */,
 				95C53CE72B90AA98002C9C00 /* ImageCollectionViewCell.swift in Sources */,
 				4F411D932BB2699100183ABA /* Tool.swift in Sources */,
 				FB5D670E2B82634C009F65F7 /* SceneDelegate.swift in Sources */,
 				4FB1B65F2BBC5D37003C5372 /* AudioViewController.swift in Sources */,
+				FBA194AC2BD4A47D008E7466 /* MusicViewController.swift in Sources */,
 				4F97ED922BA9F5FF008B3712 /* EndingPageViewController.swift in Sources */,
 				8CC4EDED2B87FA9D00E1E860 /* NameQAViewController.swift in Sources */,
+				FBA194B22BD4E9DD008E7466 /* VideoViewController3.swift in Sources */,
+				FBA4F0AE2BD3793700BB200B /* VideoViewController.swift in Sources */,
 				8CC4EDF32B8890C500E1E860 /* JobQAViewController.swift in Sources */,
 				4F97ED8A2BA9EAD1008B3712 /* ThemesQAViewController.swift in Sources */,
 				95C53CDB2B8E0524002C9C00 /* AvatarQAViewController.swift in Sources */,
@@ -327,7 +398,6 @@
 				4FB1B65B2BBC5D37003C5372 /* HomeViewController.swift in Sources */,
 				95C53CDD2B8E0568002C9C00 /* FeelQAViewController.swift in Sources */,
 				4F9D2E1C2BB3A3CA00B8AA6D /* CheckBoxListViewII.swift in Sources */,
-				FB32F5B22BAB2E8C00B32F1E /* UserProfileController.swift in Sources */,
 				8CC4EDF12B88903100E1E860 /* AgeQAViewController.swift in Sources */,
 				FB5994802B82499300D43DE6 /* AppDelegate.swift in Sources */,
 				4F49FB642BA95F09009A620E /* YesNoQAViewController.swift in Sources */,
@@ -339,6 +409,8 @@
 				40E4E53E2B90BEDB00DD24E3 /* CheckboxListView.swift in Sources */,
 				FB32F5A82BAA913D00B32F1E /* Health.swift in Sources */,
 				4F49FB662BA96583009A620E /* FrequencyQAViewController.swift in Sources */,
+				FBA194B02BD4E517008E7466 /* VideoViewController2.swift in Sources */,
+				8CB64BF42BCE4ACA00892A85 /* ChatViewController.swift in Sources */,
 				4FB1B65C2BBC5D37003C5372 /* UserProfileController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -607,6 +679,14 @@
 				minimumVersion = 1.1.1;
 			};
 		};
+		8CB64BF02BCE4AA900892A85 /* XCRemoteSwiftPackageReference "OpenAISwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/adamrushy/OpenAISwift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.4.1;
+			};
+		};
 		8CC769F32BAD5EA50076B604 /* XCRemoteSwiftPackageReference "LineChartView" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Jonathan-Gander/LineChartView";
@@ -666,6 +746,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 8C2D26062BAC0963003DD5F2 /* XCRemoteSwiftPackageReference "SpeziOnboarding" */;
 			productName = SpeziOnboarding;
+		};
+		8CB64BF12BCE4AA900892A85 /* OpenAISwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8CB64BF02BCE4AA900892A85 /* XCRemoteSwiftPackageReference "OpenAISwift" */;
+			productName = OpenAISwift;
 		};
 		8CC769F42BAD5EA50076B604 /* LineChartView */ = {
 			isa = XCSwiftPackageProductDependency;

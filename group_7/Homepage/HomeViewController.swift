@@ -128,7 +128,13 @@ class HomePageViewController: UIViewController, UICollectionViewDataSource, UICo
 
     internal func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let detailVC = AudioViewController()
-        //detailVC.data = indexPath
+        detailVC.data = indexPath.row
+        navigationController?.pushViewController(detailVC, animated: true)
+    }
+    
+    internal func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let detailVC = VideoViewController()
+        detailVC.data = indexPath.row
         navigationController?.pushViewController(detailVC, animated: true)
     }
 
